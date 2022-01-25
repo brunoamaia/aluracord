@@ -1,13 +1,31 @@
+import appConfig from '../config.json';
 
 function GlobalStyle() {
 	return (
-		<style jsx>{`
+		<style global jsx>{`
 			* {
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
+				list-style: none;
 			}
-		`}</style>
+			body {
+				font-family: 'Open Sans', sans-serif;
+			}
+			/* App fit Height */ 
+			html, body, #__next {
+				min-height: 100vh;
+				display: flex;
+				flex: 1;
+			}
+			#__next {
+				flex: 1;
+			}
+			#__next > * {
+				flex: 1;
+			}
+			/* ./App fit Height */ 
+    `}</style>
 	)
 }
 
@@ -18,7 +36,7 @@ function Title(props) {
 			<Tag>{props.children}</Tag>
 			<style jsx>{`
 				${Tag} {
-					color: red;
+					color: ${appConfig.theme.colors.neutrals['000']};
 					font-size: 24px;
 					font-weight: 600;
 				}
