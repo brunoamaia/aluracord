@@ -20,8 +20,6 @@ function HomePage() {
 		<div>
 			<Title tag="h2">Boas vindas de volta!</Title>
 			<h2>Discord - Alura Matrix</h2>
-
-			
 		</div>
 	)
 }
